@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-	<title>Pixlate</title>
+	<title>Pixlate: Translated</title>
+	
 	<!--CSS-->
 	<link rel="stylesheet" href="demo.css">
 	
@@ -10,57 +11,58 @@
 
 	</head>
 	
-	<body id="page-top" class="index">
-		<!--NAVIGATION BAR-->
-		<div class="container">
-			<nav class="navbar navbar-default navbar-fixed-top" id="navtop">
-				<div cass="row">
-					<div class="header">
-						<ul class="nav nav-pills pull-right">
-							<button class = "login">Login</button>
-							<button class = "login">SignUp</button>	
+		<body id="page-top" class="index">
+			<!--NAVIGATION BAR-->
+			<div class="container">
+				<nav class="navbar navbar-default navbar-fixed-top" id="navtop">
+					<div cass="row">
+						<div class="header">
+							<ul class="nav nav-pills pull-right">
+								<button class = "login">Login</button>
+								<button class = "login">SignUp</button>
+								<div class="input"><input type="searchBar" placeholder="Search"></input></div>
+							</ul>
+							<h3>Pixlate</h3>
+						</div>
+					</div>
+					<div class="row">
+						<ul class="nav nav-tabs pull-left">
+							<li class="active"><a href="demo.html" >Translated</a></li>
+							<li><a href="untranslated.html" >Untranslated</a></li>
 						</ul>
-						<h3>Pixlate</h3>
+					</div>
+				</nav>	
+			</div>
+
+			<center>
+				<h2>Translated Pictures</h2>
+				<p>Check out some of our users who used Pixlate to help them on their way.</p>
+
+				<div class="row marketing">
+				  	<div class="col-lg-6">
+						<h4>Aishu</h4>
+						<p>Translation: Turn left to head towards Madrid.</p>
+
+						<h4>Bronte</h4>
+						<p>Translation: Be careful there is road work and heavy traffic ahead.</p>
+
+						<h4>Meshva</h4>
+						<p>Translation: Take the next exit for the airport.</p>
+
+						<h4>Justin</h4>
+						<p>Translation: Traditional spanish resturant.</p>
+
+						<h4>David</h4>
+						<p>Translation: Flamingo Classes, from Monday through to Thursdays.</p>
 					</div>
 				</div>
-
-				<div class="row">
-					<ul class="nav nav-tabs pull-left">
-						<li class="active"><a href="#" >Translated</a></li>
-						<li><a href="untranslated.html" >Untranslated</a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-
-		<div class="content">
-			<h1>Translated Pictures</h1>
-			<p>Check out some of our users who used Pixlate to help them on their way.</p>
-
-			<div class="row marketing">
-			  	<div class="col-lg-6">
-					<h4>Aishu</h4>
-					<p>Translation: Turn left to head towards Madrid.</p>
-
-					<h4>Bronte</h4>
-					<p>Translation: Be careful there is road work and heavy traffic ahead.</p>
-
-					<h4>Meshva</h4>
-					<p>Translation: Take the next exit for the airport.</p>
-
-					<h4>Justin</h4>
-					<p>Translation: Traditional spanish resturant.</p>
-
-					<h4>David</h4>
-					<p>Translation: Flamingo Classes, from Monday through to Thursdays.</p>
-				</div>
-			</div>
-		</div>
+			</center>
 			
-		<div class="footer">
-			<p> Pixlate Private Ltd &copy;</p>
-		</div>
-	<body>
+			<div class="footer">
+				<p> Pixlate Private Ltd &copy;</p>
+			</div>
+		<body>
+	</head>
 </html>
 
 <style type="text/css">
@@ -99,6 +101,13 @@
 		font-size:50px;
 	}
 
+	h2 {
+		color: black;
+		background-color: white;
+		font-family: "baskerville-old-face";
+		font-size: 20px;
+	}
+
 	.login {
 		margin-right: 10px;
 		margin-left: 10px;
@@ -120,9 +129,33 @@
 		opacity: 0.9;
 	}
 
-	div [class="content"] {
+	center {
 		position: relative;
 		background-position: relative;
-		background-color: red;
+		background-color: white;
 	}
+
+	input[type="searchBar"] {
+        margin-right: 10px;
+        margin-left: 10px;
+        float: right;
+        background-position: right;
+        text-align: center;
+        border: 2;
+        padding: 5px;
+        font-size: 12px;
+        color: black;
+        background-color: white;
+        -moz-border-radius: 15px;
+        -webkit-border-radius: 15px;
+    }
+
+    body {
+    	background-color: white;
+        position: relative;
+    	color: black;
+    	font-family: helvetica;
+    	font-size: 12px;
+    }
+
 </style>
