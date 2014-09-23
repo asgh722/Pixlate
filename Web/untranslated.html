@@ -33,20 +33,21 @@
 				</nav>
 			</div>
 		
+			<!--Code for the pop up window is below-->
 			<div id="openModal" class="modalDialog">
 				<div>
 					<a href="#close" title="Close" class="close">X</a>
 					<h2>Translate</h2>
-					<img src="https://c1.staticflickr.com/1/112/287572492_8e26d778cd.jpg" alt="This is a test" style="width:200px;height:200px">
+					<img src="https://c1.staticflickr.com/1/112/287572492_8e26d778cd.jpg" alt="This is a test" style="width:400px;height:300px">
 					
 				</div>
 			</div>
+
 			<center>
 				<img src="https://c1.staticflickr.com/1/112/287572492_8e26d778cd.jpg" alt="This is a test" style="width:500px;height:500px">
-				<p>Yummy yummy in my tummy</p>
+				<p>System Translation: Keep Clear, Fire Station</p><br>
 				
-				<a href="#openModal"><button class = "login">Translate!</button> </a>
-				
+				<a href="#openModal"><button class = "login">Translate!</button> </a>	
 			</center>
 
 			<footer>
@@ -87,6 +88,10 @@
 		position: relative;
 		top: 100px;
 		margin-top: 100px;
+	}
+
+	p {
+		font-size: 18px;
 	}
 
 	h3 {
@@ -156,9 +161,10 @@
 	}
 
 	.modalDialog > div {
-		width: 400px;
+		width: 800px;
+		height: 500px;
 		position: relative;
-		margin: 10% auto;
+		margin: 10% auto;	
 		padding: 5px 20px 13px 20px;
 		border-radius: 10px;
 		background: #fff;
@@ -167,7 +173,7 @@
 		background: -o-linear-gradient(#fff, #999);
 	}
 
-		.modalDialog {
+	.modalDialog {
 		position: fixed;
 		font-family: Arial, Helvetica, sans-serif;
 		
