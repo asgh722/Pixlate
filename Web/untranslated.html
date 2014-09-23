@@ -44,7 +44,7 @@
 
 					<form name="input" action="demo_form_action.asp" method="get">
 					<h4>Translation:</h4> <input type="text" name="Translation" class="translation-box">
-						<input type="submit" value="Translate" class="login" style="position:relative;bottom:325px;left:40px;width:315px">
+						<input type="submit" value="Translate" class="login" style="position:relative;bottom:230px;left:40px;width:315px">
 					</form>
 
 				</div>
@@ -54,16 +54,26 @@
 
 			<center>
 				<h1>Untranslated Pictures</h1>
-				<p>Can you help translate these?</p>
+				<p>Can you help any of these users by posting a translation?</p>
 
 				<table border="0" style="width:100%">
 					<tr>
-						<td><h4>#French</h4><img src="https://c1.staticflickr.com/3/2917/14239036823_d0f2e8346c_c.jpg" alt="This is a test" style="width:550px;height:500px"><p>Translation: Escape rent.</p></td>
-						<td><h4>#Spanish</h4><img src="https://c3.staticflickr.com/7/6212/6210815994_8c6a1eaf6b_z.jpg" alt="This is a test" style="width:550px;height:500px"><p>Translation: Dining improvement plan canary.</p></td> 
+						<td><h4>#Spanish</h4><img src="https://c3.staticflickr.com/7/6212/6210815994_8c6a1eaf6b_z.jpg" alt="This is a test" style="width:550px;height:500px"><p>Translation: Dining improvement plan canary.</p><a href="#openModal"><button class = "login">Translate!</button></a></td>
+						<td><h4>#French</h4><img src="https://c1.staticflickr.com/3/2917/14239036823_d0f2e8346c_c.jpg" alt="This is a test" style="width:550px;height:500px"><p>Translation: Escape rent.</p><a href="#openModal"><button class = "login">Translate!</button></a></td>
 					</tr>
 					<tr>
-						<td><h4>#French</h4><img src="https://c1.staticflickr.com/1/112/287572492_8e26d778cd.jpg" alt="This is a test" style="width:550px;height:500px"><p>Translation: Keep clear, fire station.</p></td>
-						<td><h4>#Korean</h4><img src="https://c1.staticflickr.com/1/17/88001639_4cb8965ea3_z.jpg?zz=1" alt="This is a test" style="width:550px;height:500px"><p>Translation: Dr Chen level 3F.</p></td>
+						<td><h4>#Korean</h4><img src="https://c1.staticflickr.com/1/17/88001639_4cb8965ea3_z.jpg?zz=1" alt="This is a test" style="width:550px;height:500px"><p>Translation: Dr Chen level 3F.</p><a href="#openModal"><button class = "login">Translate!</button></a></td>
+						<td><h4>#Korean</h4><img src="https://c1.staticflickr.com/5/4145/5083525806_6465693a1b_z.jpg" alt="This is a test" style="width:550px;height:500px"><p>Translation: Traditional Korean Resturant.</p><a href="#openModal"><button class = "login">Translate!</button></a></td>
+					</tr>
+				</table>
+			</center>
+
+			<center>
+				<table border="0" style="width:100%">
+					<tr>
+						<td><h4>#Spanish</h4><img src="https://c1.staticflickr.com/1/112/287572492_8e26d778cd.jpg" alt="This is a test" style="width:500px;height:500px">
+							<p>System Translation: Keep Clear, Fire Station<a href="#openModal"><button class = "login">Translate!</button></a></p>
+						</td>
 					</tr>
 				</table>
 			</center>
@@ -122,9 +132,9 @@
 	}
 	
 	h4 {
-		font-family: "baskerville-old-face";
-		font-size: 28px;
-		color:gray;
+		position: relative;
+		left: 370px;
+		bottom: 460px;
 	}
 
 	.login {
@@ -245,27 +255,21 @@
 	
 	.translation-box{
 		width: 320px;
-		height: 200px;
-		margin-top: 10px;
-		margin-bottom: 10px;
+		height: 400px;
 		position: relative;
 		left: 370px;
 		bottom: 460px;
 	}
 
-	table {
-    	table-layout: fixed;
-    	width: 300px;
-    	text-align: left;
-    	background-position: center;
-	}
-	
 	td {
 		padding: 10px;
 	}
 
-	tr {
-		padding: 10px;
+	table {
+    	table-layout: fixed;
+    	width: 300px;
+    	background-position: center;
+    	position: center;
 	}
 	
 </style>
