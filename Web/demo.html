@@ -57,19 +57,14 @@
     			<div class="container-fluid">
 				<div ng-controller="flickrController">
 					<div class="row">
-						<div class="col-md-3 portfolio-item" ng-repeat="image in images" >
-							<div class="img-wrap thumbnail" style=" width: 475;height: 400;">
-								<img ng-src="{{image}}" style="width:450px; height:400px">
+						<div class="col-md-6 portfolio-item" ng-repeat="image in images" >
+							<div class="img-wrap thumbnail" style=" width: 900;height: 700;">
+								<img ng-src="{{image}}" style="width:900px; height:700px">
 								<br>
 								<div class="caption">
 									<p class="translations" style="font-size: 150%;font-style: italic;color: #404042;">&quot;Translation&quot;</p>
 									<p style="color:#C2C2D6;">#Spanish<p>
 									<p>	
-										<div class="pixlate-tool">
-											<input type="text" >
-											<a href="#" class="btn btn-primary" role="button"style="position:relative; bottom:2px;">Pixlate!</a>
-										</div>
-									</p>
 								</div>
 							</p>
 							</div>
@@ -225,11 +220,6 @@
 	.img-wrap:hover img{
 		opacity: 0.4;
 	    filter: alpha(opacity=100); /* For IE8 and earlier */
-	}
-	.pixlate-tool{
-		position:absolute;
-		right: 30px;
-		bottom: 50px;
 	}
 
 	footer {
