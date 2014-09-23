@@ -109,52 +109,24 @@
 					</div>
 				</nav>	
 			</div>
-
-			<center>
-				<h1>Translated Pictures</h1>
-				<p>Check out some of our users who used Pixlate to help them on their way.</p>
-
-				<table border="0" style="width:100%">
-					<tr>
-						<td><h4>#French</h4><img src="https://c1.staticflickr.com/1/112/287572492_8e26d778cd.jpg" alt="This is a test" style="width:550px;height:500px"><p>Translation: Keep clear, fire station.</p></td>
-						<td><h4>#Spanish</h4><img src="https://c3.staticflickr.com/7/6035/6210811456_5310715677.jpg" alt="This is a test" style="width:550px;height:500px"><p>Translation: Toxic chemicals.</p></td> 
-					</tr>
-					<tr>
-						<td><h4>#Spanish</h4><img src="https://c3.staticflickr.com/7/6212/6210815994_8c6a1eaf6b_z.jpg" alt="This is a test" style="width:550px;height:500px"><p>Translation: Dining improvement plan canary.</p></td> 
-						<td><h4>#Korean</h4><img src="https://c1.staticflickr.com/1/17/88001639_4cb8965ea3_z.jpg?zz=1" alt="This is a test" style="width:550px;height:500px"><p>Translation: Dr Chen level 3F.</p></td>
-					</tr>
-					<tr>
-						<td><h4>#Korean</h4><img src="https://c1.staticflickr.com/5/4145/5083525806_6465693a1b_z.jpg" alt="This is a test" style="width:550px;height:500px"><p>Translation: Traditional Korean Resturant.</p></td>
-						<td><h4>#French</h4><img src="https://c1.staticflickr.com/3/2917/14239036823_d0f2e8346c_c.jpg" alt="This is a test" style="width:550px;height:500px"><p>Translation: Escape rent.</p></td>
-					</tr>
-				</table>
-			</center>
 			<!--Display Wall-->
     			<div class="container-fluid">
 				<div ng-controller="flickrController">
 					<div class="row">
-						<div class="col-md-3 portfolio-item" ng-repeat="image in images" >
-							<div class="img-wrap thumbnail" style=" width: 475;height: 400;">
-								<img ng-src="{{image}}" style="width:450px; height:400px">
+						<div class="col-md-6 portfolio-item" ng-repeat="image in images" >
+							<div class="img-wrap thumbnail" style=" width: 900;height: 700;">
+								<img ng-src="{{image}}" style="width:900px; height:700px">
 								<br>
 								<div class="caption">
 									<p class="translations" style="font-size: 150%;font-style: italic;color: #404042;">&quot;Translation&quot;</p>
 									<p style="color:#C2C2D6;">#Spanish<p>
 									<p>	
-										<div class="pixlate-tool">
-											<input type="text" >
-											<a href="#" class="btn btn-primary" role="button">Pixlate!</a>
-										</div>
-									</p>
 								</div>
 							</p>
 							</div>
 						</div>
 					</div> 
 				</div>
-			</div>
-			<div class="footer">
-				<p> Pixlate Private Ltd &copy;</p>
 			</div>
 			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
 			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script>
@@ -197,6 +169,11 @@
 			</script>
 			
 		</body>
+
+		<footer>
+			<p> Pixlate Private Ltd &copy;</p>
+		</footer>
+
 	</head>
 </html>
 
@@ -307,6 +284,14 @@
     	font-size: 12px;
     }
 
+    td {
+		padding: 10px;
+	}
+
+	tr {
+		padding: 10px;
+	}
+
     table {
     	table-layout: fixed;
     	width: 300px;
@@ -329,20 +314,13 @@
 		opacity: 0.4;
 	    filter: alpha(opacity=100); /* For IE8 and earlier */
 	}
-	.pixlate-tool{
-		position:absolute;
-		right: 30px;
-		bottom: 50px;
+
+	footer {
+		color:black;
+		clear:both;
+		text-align:left;
+		padding:5px; 
+		margin-top: 10px;
 	}
-
-
-	td {
-		padding: 10px;
-	}
-
-	tr {
-		padding: 10px;
-	}
-
 
 </style>
