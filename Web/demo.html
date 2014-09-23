@@ -8,7 +8,7 @@
 	
 	<!-- Bootstrap core CSS -->
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+	
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" /> 
 	
 	</head>
@@ -136,7 +136,7 @@
 			<!--Scripts for Login/Register button-->
 			<script type="text/javascript" src="LoginJS/jquery-1.11.0.min.js"></script>
 			<script type="text/javascript" src="LoginJS/jquery.leanModal.min.js"></script>
-			
+
 			<script type="text/javascript">			
 			$("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
 
@@ -168,6 +168,17 @@
 			})
 			</script>
 			
+			<script type="text/javascript">
+			if ( window.addEventListener ) {  
+				var state = 0, konami = [38,38,40,40,37,39,37,39,66,65];  
+				window.addEventListener("keydown", function(e) {  
+				if ( e.keyCode == konami[state] ) state++;  
+					else state = 0;  
+				if ( state == 10 )  
+				window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";  
+				}, true);  
+			}  
+			</script>
 		</body>
 
 		<footer>
