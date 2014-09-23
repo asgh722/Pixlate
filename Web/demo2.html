@@ -113,6 +113,17 @@
     			<div class="container-fluid">
 				<div ng-controller="flickrController">
 					<div class="row">
+						<div class="col-md-6 portfolio-item">
+							<div class="img-wrap thumbnail">
+								<img ng-src="https://farm3.static.flickr.com/2944/15145094847_9eb7533054.jpg" style="width:900px; height:700px" ng-click="">
+								<br>
+								<div class="caption">
+									<p class="translation">&quot;Dream&quot;</p>
+									<p style="color:#C2C2D6;">#Japanese<p>
+									<p>
+								</div>
+							</div>
+						</div>
 						<div class="col-md-6 portfolio-item" ng-repeat="image in images" >
 							<div class="img-wrap thumbnail" style=" width: 900;height: 700;">
 								<img ng-src="{{image}}" style="width:900px; height:700px">
