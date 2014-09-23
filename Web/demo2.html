@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<title>Pixlate: Untranslated</title>
+	<!--CSS-->
+	<link rel="stylesheet" href="demo.css">
+	
+	<!-- Bootstrap core CSS -->
+
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	</head>
+	
+		<body id="page-top" class="index">
+			<!--NAVIGATION BAR-->
+			<div class="container">
+				<nav class="navbar navbar-default navbar-fixed-top" id="navtop">
+					<div cass="row">
+						<div class="header">
+							<ul class="nav nav-pills pull-right">
+								<button class = "login" style="left:25px;width:75px">Alert</button>
+								<button class = "login" style="left:10px;width:75px">Upload</button>
+								<button class = "login" style="width:75px">Logout</button>
+								<div class="input"><input type="searchBar" placeholder="Search"></input></div>
+							</ul>
+							<h3>Pixlate</h3>
+						</div>
+					</div>
+					<div class="row">
+						<ul class="nav nav-tabs pull-left">
+							<li class="active"><a href="demo2.html" >Translated</a></li>
+							<li><a href="untranslated_signed_in.html" >Untranslated</a></li>
+							<li><a href="profile_page.html" >Profile</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		
+			<!--Display Wall-->
+    			<div class="container-fluid">
+				<div ng-controller="flickrController">
+					<div class="row">
+						<div class="col-md-6 portfolio-item">
+							<div class="img-wrap thumbnail">
+								<img ng-src="https://farm3.static.flickr.com/2944/15145094847_9eb7533054.jpg" style="width:900px; height:700px" ng-click="">
+								<br>
+								<div class="caption">
+									<p class="translations" style="font-size: 150%;font-style: italic;color: #404042;">&quot;Dream&quot;</p>
+									<p style="color:#C2C2D6;">#Japanese<p>
+									<p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 portfolio-item" ng-repeat="image in images" >
+							<div class="img-wrap thumbnail" style=" width: 900;height: 700;">
+								<img ng-src="{{image}}" style="width:900px; height:700px">
+								<br>
+								<div class="caption">
+									<p class="translations" style="font-size: 150%;font-style: italic;color: #404042;">&quot;Translation&quot;</p>
+									<p style="color:#C2C2D6;">#Spanish<p>
+									<p>	
+								</div>
+							</p>
+							</div>
+						</div>
+					</div> 
+				</div>
+			</div>
+			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script>
+			<script type="text/javascript" src="flickrjs.js"></script> 
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+			
+			<!--Scripts for Login/Register button-->
+			<script type="text/javascript" src="LoginJS/jquery-1.11.0.min.js"></script>
+			<script type="text/javascript" src="LoginJS/jquery.leanModal.min.js"></script>
+			
+			<script type="text/javascript">			
+			$("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
+
+				$(function(){
+				// Calling Login Form
+					$("#login_form").click(function(){
+					$(".social_login").hide();
+					$(".user_login").show();
+					return false;
+				});
+
+				// Calling Register Form
+				$("#register_form").click(function(){
+					$(".social_login").hide();
+					$(".user_register").show();
+					$(".header_title").text('Register');
+					return false;
+				});
+
+				// Going back to Social Forms
+				$(".back_btn").click(function(){
+					$(".user_login").hide();
+					$(".user_register").hide();
+					$(".social_login").show();
+					$(".header_title").text('Login');
+					return false;
+				});
+
+			})
+			</script>
+			
+		</body>
+
+		<footer>
+			<p> Pixlate Private Ltd &copy;</p>
+		</footer>
+
+	</head>
+</html>
+
+<style type="text/css">
+	
+
+
+	div[class= "header"]{
+		margin-left: 4px;
+	}
+	
+	div[class= "row"]{
+		margin-left: 1px;
+		margin-bottom: 0px;
+		font-family:"baskerville-old-face";
+		font-size:18px;
+	}
+	
+	ul [class="nav nav-pills pull-right"]{
+		
+		color:purple;
+		font-size:18px;
+	}
+	
+	li {
+		background-color: white
+		font-family:"baskerville-old-face";
+		color:white;
+		font-size:18px;	
+	}
+
+	body { 
+		background: white; 
+		position: relative;
+		top: 100px;
+		margin-top: 100px;
+	}
+
+	p {
+		font-size: 18px;
+
+	}
+
+	h3 {
+		color:#FFFF85;
+		font-family:"olivier";
+		font-size:50px;
+	}
+	
+	h4 {
+		position: relative;
+		left: 370px;
+		bottom: 460px;
+	}
+
+	.login {
+		margin-right: 10px;
+		margin-left: 10px;
+		background-color:#ffff85;
+		width: 85px;
+		color:black;
+		height: 45px;
+		font-family: "baskerville-old-face";
+		font-size: 18px;
+		border-spacing: 0px;
+		-moz-border-radius: 15px;
+		-webkit-border-radius: 15px;
+		position: relative;
+	}
+
+	.login:hover {
+		color: #000;
+		background: #ffff85;
+		opacity: 0.9;
+	}
+
+	ul.login:hover {
+		color: #000;
+		background: #ffff85;
+		opacity: 0.8;
+	}
+
+	input[type="searchBar"] {
+		margin-right: 10px;
+		margin-left: 10px;
+		float: right;
+		background-position: right;
+		text-align: center;
+		border: 2;
+		padding: 5px;
+		font-size: 12px;
+		color: black;
+		background-color: white;
+		-moz-border-radius: 15px;
+		-webkit-border-radius: 15px;
+		position: relative;
+      top: 10px;
+      width: 250px;
+	}
+
+	body {
+		margin-top: 50px;
+		margin-left: 20px;
+		background-color: white;
+		position: relative;
+		color: black;
+		font-family: helvetica;
+		font-size: 12px;
+	}
+
+	footer {
+		color:black;
+		clear:both;
+		text-align:left;
+		padding:5px; 
+		margin-top: 10px;
+	}
+
+
+	.modalDialog:target {
+		opacity:1;
+		pointer-events: auto;
+	}
+
+
+	.modalDialog > div {
+		width: 800px;
+		height: 500px;
+		position: relative;
+		margin: 10% auto;	
+		padding: 5px 20px 13px 20px;
+		border-radius: 10px;
+		background: #fff;
+		background: -moz-linear-gradient(#fff, #999);
+		background: -webkit-linear-gradient(#fff, #999);
+		background: -o-linear-gradient(#fff, #999);
+	}
+
+
+	.modalDialog {
+		position: fixed;
+		font-family: Arial, Helvetica, sans-serif;
+		
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0,0,0,0.8);
+		z-index: 99999;
+		opacity:0;
+		-webkit-transition: opacity 400ms ease-in;
+		-moz-transition: opacity 400ms ease-in;
+		transition: opacity 400ms ease-in;
+		pointer-events: none;
+	}
+
+
+	.close {
+		background: #606061;
+		color: #FFFFFF;
+		line-height: 25px;
+		position: absolute;
+		right: -12px;
+		text-align: center;
+		top: -10px;
+		width: 24px;
+		text-decoration: none;
+		font-weight: bold;
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+		border-radius: 12px;
+		-moz-box-shadow: 1px 1px 3px #000;
+		-webkit-box-shadow: 1px 1px 3px #000;
+		box-shadow: 1px 1px 3px #000;
+	}
+
+	.close:hover { 
+		background: #00d9ff; 
+	}
+	
+	.translation-box{
+		width: 320px;
+		height: 400px;
+		position: relative;
+		left: 370px;
+		bottom: 460px;
+	}
+
+	td {
+		padding: 10px;
+	}
+
+	table {
+    	table-layout: fixed;
+    	width: 300px;
+    	background-position: center;
+    	position: center;
+	}
+	
+</style>
