@@ -51,6 +51,18 @@
 					</tr>
 				</table>
 			</center>
+			<!--Display Wall-->
+    			<div ng-controller="flickrController">
+			<div class="row">
+				<div class="col-md-3 portfolio-item" ng-repeat="image in images" >
+					<center><div class="img-wrap">
+						<img ng-src="image" class="thumbnail" >
+						<p class="img-description">&quot;Translation&quot;</p>
+					</div></center>
+					<br>
+				</div>
+			</div> 
+	</div>
 			<div class="footer">
 				<p> Pixlate Private Ltd &copy;</p>
 			</div>
@@ -160,5 +172,37 @@
     	text-align: left;
     	background-position: center;
     	color: gray;
+	}
+	
+<!--PHOTO WALL CSS-->
+   .thumbnail {
+	 width: 400;
+	height: 400;
+	}
+
+   .img-wrap:hover img{
+	opacity: 0.4;
+	 filter: alpha(opacity=100); /* For IE8 and earlier */
+   }
+   .img-wrap{
+	position: relative;
+	height: 400px;
+	width: 500px;
+	}
+   .img-description{
+	font-style: italic;
+	font-size:250%;
+	position: relative;
+	bottom: 80px;
+	left: -40px;
+	color: black;
+
+	visibility: hidden;
+	opacity: 0;
+ 	}
+ 
+    .img-wrap:hover .img-description {
+	visibility: visible;
+	opacity: 0.8;
 	}
 </style>
