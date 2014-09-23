@@ -1,109 +1,228 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-	<title>Pixlate</title>
+	<title>Pixlate: Untranslated</title>
 	<!--CSS-->
 	<link rel="stylesheet" href="demo.css">
 	
 	<!-- Bootstrap core CSS -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 	</head>
 	
-	<body id="page-top" class="index">
-	<!--NAVIGATION BAR-->
-	<div class="container">
-		<nav class="navbar navbar-default navbar-fixed-top" id="navtop">
-			<div cass="row">
-				<div class="header">
-					<ul class="nav nav-pills pull-right">
-							<button class = "login">Login</button>
-							<button class = "login">SignUp</button>
-							
-					</ul>
-					<h3>Pixlate</h3>
-				</div>
-			</div>
-			<div class="row">
-				<ul class="nav nav-tabs pull-left">
+		<body id="page-top" class="index">
+			<!--NAVIGATION BAR-->
+			<div class="container">
+				<nav class="navbar navbar-default navbar-fixed-top" id="navtop">
+					<div cass="row">
+						<div class="header">
+							<ul class="nav nav-pills pull-right">
+								<button class = "login">Login</button>
+								<button class = "login">SignUp</button>
+								<div class="input"><input type="searchBar" placeholder="Search"></input></div>
+							</ul>
+							<h3>Pixlate</h3>
+						</div>
+					</div>
+					<div class="row">
+						<ul class="nav nav-tabs pull-left">
 							<li><a href="demo.html" >Translated</a></li>
 							<li class="active"><a href="untranslated.html" >Untranslated</a></li>
-					</ul>
+						</ul>
+					</div>
+				</nav>
 			</div>
-			
-		</nav>
 		
-	</div>
-	
-			
-	<center>
-		<img src="https://c1.staticflickr.com/1/112/287572492_8e26d778cd.jpg" alt="This is a test" style="width:500px;height:500px">
-		<p>Yummy yummy in my tummy</p>
-		<button class = "login">Translate!</button>
-		
-		<img src="https://c1.staticflickr.com/5/4145/5083525806_6465693a1b_b.jpg" alt="This is a test" style="width:500px;height:500px">
-		<p>I want some Korean food</p>
-		<button class = "login">Translate!</button>
-	</center>
-	
-	<p>TESTING 123</p>
+			<!--Code for the pop up window is below-->
 
-	<body>
+			<div id="openModal" class="modalDialog">
+				<div>
+					<a href="#close" title="Close" class="close">X</a>
+					<h2>Translate</h2>
+					<img src="https://c1.staticflickr.com/1/112/287572492_8e26d778cd.jpg" alt="This is a test" style="width:350px;height:350px">
+					<p>System Translation: Keep Clear, Fire Station</p><br>
+
+					<form name="input" action="demo_form_action.asp" method="get">
+					Translation: <input type="text" name="Translation">
+						<input type="submit" value="Translate">
+					</form>
+
+				</div>
+			</div>
+
+			<center>
+				<p>#Spanish</p>
+				<img src="https://c1.staticflickr.com/1/112/287572492_8e26d778cd.jpg" alt="This is a test" style="width:500px;height:500px">
+				<p>System Translation: Keep Clear, Fire Station</p><br>
+				
+				<a href="#openModal"><button class = "login">Translate!</button> </a>	
+			</center>
+
+			<footer>
+				<p> Pixlate Private Ltd &copy;</p>
+			</footer>
+		<body>
+	</head>
 </html>
 
 <style type="text/css">
-  div[class= "header"]{
-  	margin-left: 4px;
-  }
-    div[class= "row"]{
-  	margin-left: 1px;
-  	margin-bottom: 0px;
-  	font-family:"baskerville-old-face";
-  	font-size:18px;
-
-  }
-  ul [class="nav nav-pills pull-right"]{
-  	
-  	color:purple;
-  	font-size:18px;
-  }
-  li{
-  	background-color: white
-  	font-family:"baskerville-old-face";
-  	color:white;
-  	font-size:18px;	
-  }
-  body { 
-    background: white; 
-    position: relative;
-    top: 100px;
-  }
-
-  h3 {
-    color:#FFFF85;
-    font-family:"olivier";
-    font-size:50px;
-  }
-
-  .login {
-  		margin-right: 10px;
-  		margin-left: 10px;
-        background-color:#ffff85;
-        width: 85px;
-        color:black;
-        height: 45px;
-        font-family: "baskerville-old-face";
-        font-size: 18px;
-        border-spacing: 0px;
-
-        -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-
-    }
-    .login:hover {
-  		color: #000;
-  		background: #ffff85;
-  		opacity: 0.9;
+	
+	div[class= "header"]{
+		margin-left: 4px;
+	}
+	
+	div[class= "row"]{
+		margin-left: 1px;
+		margin-bottom: 0px;
+		font-family:"baskerville-old-face";
+		font-size:18px;
+	}
+	
+	ul [class="nav nav-pills pull-right"]{
+		
+		color:purple;
+		font-size:18px;
+	}
+	
+	li {
+		background-color: white
+		font-family:"baskerville-old-face";
+		color:white;
+		font-size:18px;	
 	}
 
+	body { 
+		background: white; 
+		position: relative;
+		top: 100px;
+		margin-top: 100px;
+	}
+
+	p {
+		font-size: 18px;
+
+	}
+
+	h3 {
+		color:#FFFF85;
+		font-family:"olivier";
+		font-size:50px;
+	}
+
+	.login {
+		margin-right: 10px;
+		margin-left: 10px;
+		background-color:#ffff85;
+		width: 85px;
+		color:black;
+		height: 45px;
+		font-family: "baskerville-old-face";
+		font-size: 18px;
+		border-spacing: 0px;
+
+		-moz-border-radius: 15px;
+		-webkit-border-radius: 15px;
+	}
+
+	.login:hover {
+		color: #000;
+		background: #ffff85;
+		opacity: 0.9;
+	}
+
+	input[type="searchBar"] {
+		margin-right: 10px;
+		margin-left: 10px;
+		float: right;
+		background-position: right;
+		text-align: center;
+		border: 2;
+		padding: 5px;
+		font-size: 12px;
+		color: black;
+		background-color: white;
+		-moz-border-radius: 15px;
+		-webkit-border-radius: 15px;
+	}
+
+	body {
+		margin-top: 50px;
+		margin-left: 20px;
+		background-color: white;
+		position: relative;
+		color: black;
+		font-family: helvetica;
+		font-size: 12px;
+	}
+
+	footer {
+		color:black;
+		clear:both;
+		text-align:center;
+		padding:5px; 
+		margin-top: 10px;
+	}
+
+
+	.modalDialog:target {
+		opacity:1;
+		pointer-events: auto;
+	}
+
+
+	.modalDialog > div {
+		width: 800px;
+		height: 500px;
+		position: relative;
+		margin: 10% auto;	
+		padding: 5px 20px 13px 20px;
+		border-radius: 10px;
+		background: #fff;
+		background: -moz-linear-gradient(#fff, #999);
+		background: -webkit-linear-gradient(#fff, #999);
+		background: -o-linear-gradient(#fff, #999);
+	}
+
+
+	.modalDialog {
+		position: fixed;
+		font-family: Arial, Helvetica, sans-serif;
+		
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0,0,0,0.8);
+		z-index: 99999;
+		opacity:0;
+		-webkit-transition: opacity 400ms ease-in;
+		-moz-transition: opacity 400ms ease-in;
+		transition: opacity 400ms ease-in;
+		pointer-events: none;
+	}
+
+
+	.close {
+		background: #606061;
+		color: #FFFFFF;
+		line-height: 25px;
+		position: absolute;
+		right: -12px;
+		text-align: center;
+		top: -10px;
+		width: 24px;
+		text-decoration: none;
+		font-weight: bold;
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+		border-radius: 12px;
+		-moz-box-shadow: 1px 1px 3px #000;
+		-webkit-box-shadow: 1px 1px 3px #000;
+		box-shadow: 1px 1px 3px #000;
+	}
+
+	.close:hover { 
+		background: #00d9ff; 
+	}
 </style>

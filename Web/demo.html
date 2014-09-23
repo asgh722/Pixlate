@@ -1,127 +1,201 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en" ng-app >
 <head>
-	<title>Pixlate</title>
+	<title>Pixlate: Translated</title>
+	
 	<!--CSS-->
 	<link rel="stylesheet" href="demo.css">
 	
 	<!-- Bootstrap core CSS -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 	</head>
 	
-	<body id="page-top" class="index">
-	<!--NAVIGATION BAR-->
-	<div class="container">
-		<nav class="navbar navbar-default navbar-fixed-top" id="navtop">
-			<div cass="row">
-				<div class="header">
-					<ul class="nav nav-pills pull-right">
-							<button class = "login">Login</button>
-							<button class = "login">SignUp</button>
-							
-					</ul>
-					<h3>Pixlate</h3>
+		<body id="page-top" class="index">
+			<!--NAVIGATION BAR-->
+			<div class="container">
+				<nav class="navbar navbar-default navbar-fixed-top" id="navtop">
+					<div cass="row">
+						<div class="header">
+							<ul class="nav nav-pills pull-right">
+								<button class = "login">Login</button>
+								<button class = "login">SignUp</button>
+								<div class="input"><input type="searchBar" placeholder="Search"></input></div>
+							</ul>
+							<h3>Pixlate</h3>
+						</div>
+					</div>
+					<div class="row">
+						<ul class="nav nav-tabs pull-left">
+							<li class="active"><a href="demo.html" >Translated</a></li>
+							<li><a href="untranslated.html" >Untranslated</a></li>
+						</ul>
+					</div>
+				</nav>	
+			</div>
+
+			<center>
+				<h1>Translated Pictures</h1>
+				<p>Check out some of our users who used Pixlate to help them on their way.</p>
+
+				<table border="0" style="width:100%" cellpadding="5">
+					<tr>
+						<td><h4>#Spanish</h4><img src="https://c1.staticflickr.com/1/112/287572492_8e26d778cd.jpg" alt="This is a test" style="width:500px;height:500px"><p>Translation: Turn left to head towards Madrid.</p></td>
+						<td><h4>#Spanish</h4><img src="https://c1.staticflickr.com/1/112/287572492_8e26d778cd.jpg" alt="This is a test" style="width:500px;height:500px"><p>Translation: Take the next exit for the airport.</p></td> 
+						<td><h4>#Korean</h4><img src="https://c1.staticflickr.com/1/112/287572492_8e26d778cd.jpg" alt="This is a test" style="width:500px;height:500px"><p>Translation: Be careful there is road work and heavy traffic ahead.</p></td>
+					</tr>
+					<tr>
+						<td><h4>#French</h4><img src="https://c1.staticflickr.com/1/112/287572492_8e26d778cd.jpg" alt="This is a test" style="width:500px;height:500px"><p>Translation: Traditional french resturant.</p></td>
+						<td><h4>#Spanish</h4><img src="https://c1.staticflickr.com/1/112/287572492_8e26d778cd.jpg" alt="This is a test" style="width:500px;height:500px"><p>Translation: Flamingo Classes, from Monday through to Thursdays.</p></td> 
+						<td><h4>#Korean</h4><img src="https://c1.staticflickr.com/1/112/287572492_8e26d778cd.jpg" alt="This is a test" style="width:500px;height:500px"><p>Translation: Be very careful, strong winds ahead.</p></td>
+					</tr>
+				</table>
+			</center>
+			<!--Display Wall-->
+    			<div class="container-fluid">
+				<div ng-controller="flickrController">
+					<div class="row">
+						<div class="col-md-3 portfolio-item" ng-repeat="image in images" >
+							<div class="img-wrap thumbnail" style=" width: 475;height: 400;">
+								<img ng-src="{{image}}" style="width:450px; height:400px">
+								<br>
+								<div class="caption">
+									<p class="translations">&quot;Translation&quot;</p>
+									<p class="lang-tag">#Spanish<p>
+									<p><a href="#" class="btn btn-primary pull-right" role="button" style="position:absolute;bottom:30px;right:30px;margin:0;padding:15px 11px; width:100px; height:50px font-size:150%;">Pixlate!</a>
+							</div>
+						</div>
+					</div> 
 				</div>
 			</div>
-			<div class="row">
-				<ul class="nav nav-tabs pull-left">
-							<li class="active"><a href="#" >Translated</a></li>
-							<li><a href="untranslated.html" >Untranslated</a></li>
-					</ul>
+			<div class="footer">
+				<p> Pixlate Private Ltd &copy;</p>
 			</div>
-		</nav>
-
-    </div>
-
-	<div class="content">
-        <h1>Translated Pictures</h1>
-        <p>Check out some of our users who used Pixlate to help them on their way.</p>
-
-        <div class="row marketing">
-          <div class="col-lg-6">
-            <h4>Aishu</h4>
-            <p>Translation: Turn left to head towards Madrid.</p>
-
-            <h4>Bronte</h4>
-            <p>Translation: Be careful there is road work and heavy traffic ahead.</p>
-
-            <h4>Meshva</h4>
-            <p>Translation: Take the next exit for the airport.</p>
-
-            <h4>Justin</h4>
-            <p>Translation: Traditional spanish resturant.</p>
-
-            <h4>David</h4>
-            <p>Translation: Flamingo Classes, from Monday through to Thursdays.</p>
-          </div>
-        </div>
-    </div>
-    <div class="footer">
-        <p> Pixlate Private Ltd &copy;</p>
-    </div>
-
-    </div>
-
-	<body>
+			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script>
+			<script type="text/javascript" src="flickrjs.js"></script> 
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+		<body>
+	</head>
 </html>
 
 <style type="text/css">
-  div[class= "header"]{
-  	margin-left: 4px;
-  }
-    div[class= "row"]{
-  	margin-left: 1px;
-  	margin-bottom: 0px;
-  	font-family:"baskerville-old-face";
-  	font-size:18px;
-
-  }
-  ul [class="nav nav-pills pull-right"]{
+ 	
+ 	div[class= "header"]{
+		margin-left: 4px;
+  	}
+	
+	div[class= "row"]{
+		margin-left: 1px;
+		margin-bottom: 0px;
+		font-family:"baskerville-old-face";
+		font-size:18px;
+  	}
+ 	
+ 	ul [class="nav nav-pills pull-right"]{
+	
+		color:purple;
+		font-size:18px;
+  	}
   	
-  	color:purple;
-  	font-size:18px;
-  }
-  li{
-  	background-color: white
-  	font-family:"baskerville-old-face";
-  	color:white;
-  	font-size:18px;	
-  }
-  body { 
-    background: white; 
-  }
-
-  h3 {
-    color:#FFFF85;
-    font-family:"olivier";
-    font-size:50px;
-  }
-
-  .login {
-  		margin-right: 10px;
-  		margin-left: 10px;
-        background-color:#ffff85;
-        width: 85px;
-        color:black;
-        height: 45px;
-        font-family: "baskerville-old-face";
-        font-size: 18px;
-        border-spacing: 0px;
-
-        -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-
-    }
-    .login:hover {
-  		color: #000;
-  		background: #ffff85;
-  		opacity: 0.9;
+  	li {
+		background-color: white
+		font-family:"baskerville-old-face";
+		color:white;
+		font-size:18px;	
 	}
 
-    div [class="content"] {
-        position: relative;
-        background-position: relative;
-        background-color: red;
+	center {
+		background-position: center;
+		position: relative;
+		background-color: white;
+	}
+	
+	body { 
+		background: white; 
+	}
+
+	h3 {
+		color:#FFFF85;
+		font-family:"olivier";
+		font-size:50px;
+	}
+
+	h2 {
+		color: black;
+		background-color: white;
+		font-family: "baskerville-old-face";
+		font-size: 20px;
+	}
+
+	.login {
+		margin-right: 10px;
+		margin-left: 10px;
+		background-color:#ffff85;
+		width: 85px;
+		color:black;
+		height: 45px;
+		font-family: "baskerville-old-face";
+		font-size: 18px;
+		border-spacing: 0px;
+
+		-moz-border-radius: 15px;
+		-webkit-border-radius: 15px;
+	}
+
+	.login:hover {
+		color: #000;
+		background: #ffff85;
+		opacity: 0.9;
+	}
+
+	input[type="searchBar"] {
+        margin-right: 10px;
+        margin-left: 10px;
+        float: right;
+        background-position: right;
+        text-align: center;
+        border: 2;
+        padding: 5px;
+        font-size: 12px;
+        color: black;
+        background-color: white;
+        -moz-border-radius: 15px;
+        -webkit-border-radius: 15px;
     }
+
+    body {
+    	margin-top: 150px;
+		margin-left: 20px;
+    	background-color: white;
+        position: relative;
+        background-position: center;
+    	color: black;
+    	font-family: helvetica;
+    	font-size: 12px;
+    }
+
+    table {
+    	table-layout: fixed;
+    	width: 300px;
+    	text-align: left;
+    	background-position: center;
+    	color: gray;
+	}
+	
+<!--PHOTO WALL CSS-->
+.translations{
+	font-size: 150%;
+	font-style: italic;
+	color: #404042;;
+}
+
+.lang-tag{
+	color: #A3A3C2;
+}
+
+.img-wrap:hover img{
+	opacity: 0.4;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
 </style>
