@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" ng-app >
+<head>
+	<title>Pixlate: Translated</title>
+	
+	<!--CSS-->
+	<link rel="stylesheet" href="demo.css">
+	
+	<!-- Bootstrap core CSS -->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	</head>
+	
+		<body id="page-top" class="index">
+			<!--NAVIGATION BAR-->
+			<div class="container">
+				<nav class="navbar navbar-default navbar-fixed-top" id="navtop">
+					<div cass="row">
+						<div class="header">
+							<ul class="nav nav-pills pull-right">
+								<button class = "login">Login</button>
+								<button class = "login">SignUp</button>
+								<div class="input"><input type="searchBar" placeholder="Search"></input></div>
+							</ul>
+							<h3>Pixlate</h3>
+						</div>
+					</div>
+					<div class="row">
+						<ul class="nav nav-tabs pull-left">
+							<li class="active"><a href="demo.html" >Translated</a></li>
+							<li><a href="untranslated.html" >Untranslated</a></li>
+						</ul>
+					</div>
+				</nav>	
+			</div>
+			<!--Display Wall-->
+    			<div class="container-fluid">
+				<div ng-controller="flickrController">
+					<div class="row">
+						<div class="col-md-6 portfolio-item" ng-repeat="image in images" >
+							<div class="img-wrap thumbnail" style=" width: 900;height: 700;">
+								<img ng-src="{{image}}" style="width:900px; height:700px">
+								<br>
+								<div class="caption">
+									<p class="translations" style="font-size: 150%;font-style: italic;color: #404042;">&quot;Translation&quot;</p>
+									<p style="color:#C2C2D6;">#Spanish<p>
+									<p>	
+								</div>
+							</p>
+							</div>
+						</div>
+					</div> 
+				</div>
+			</div>
+			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script>
+			<script type="text/javascript" src="flickrjs.js"></script> 
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+		<body>
+
+		<footer>
+			<p> Pixlate Private Ltd &copy;</p>
+		</footer>
+	</head>
+</html>
+
+<style type="text/css">
+ 	
+ 	div[class= "header"]{
+		margin-left: 4px;
+  	}
+	
+	div[class= "row"]{
+		margin-left: 1px;
+		margin-bottom: 0px;
+		font-family:"baskerville-old-face";
+		font-size:18px;
+  	}
+ 	
+ 	ul [class="nav nav-pills pull-right"]{
+	
+		color:purple;
+		font-size:18px;
+  	}
+  	
+  	li {
+		background-color: white
+		font-family:"baskerville-old-face";
+		color:white;
+		font-size:18px;	
+	}
+
+	center {
+		background-position: center;
+		position: relative;
+		background-color: white;
+	}
+	
+	body { 
+		background: white; 
+	}
+
+	h3 {
+		color:#FFFF85;
+		font-family:"olivier";
+		font-size:50px;
+	}
+
+	h2 {
+		color: black;
+		background-color: white;
+		font-family: "baskerville-old-face";
+		font-size: 20px;
+	}
+
+	h4 {
+		color: gray;
+		font-size: 26px;
+		font-family: "baskerville-old-face";
+	}
+
+	p {
+		font-family: "baskerville-old-face";
+		font-size: 20px;
+	}
+
+	.login {
+		margin-right: 10px;
+		margin-left: 10px;
+		background-color:#ffff85;
+		width: 85px;
+		color:black;
+		height: 45px;
+		font-family: "baskerville-old-face";
+		font-size: 18px;
+		border-spacing: 0px;
+
+		-moz-border-radius: 15px;
+		-webkit-border-radius: 15px;
+	}
+
+	.login:hover {
+		color: #000;
+		background: #ffff85;
+		opacity: 0.9;
+	}
+
+	input[type="searchBar"] {
+        margin-right: 10px;
+        margin-left: 10px;
+        float: right;
+        background-position: right;
+        text-align: center;
+        border: 2;
+        padding: 5px;
+        font-size: 12px;
+        color: black;
+        background-color: white;
+        -moz-border-radius: 15px;
+        -webkit-border-radius: 15px;
+    }
+
+    body {
+    	margin-top: 150px;
+		margin-left: 20px;
+    	background-color: white;
+        position: relative;
+        background-position: center;
+    	color: black;
+    	font-family: helvetica;
+    	font-size: 12px;
+    }
+
+    td {
+		padding: 10px;
+	}
+
+	tr {
+		padding: 10px;
+	}
+
+    table {
+    	table-layout: fixed;
+    	width: 300px;
+    	text-align: left;
+    	background-position: center;
+	}
+	
+	<!--PHOTO WALL CSS-->
+	.translations{
+		font-size: 150%;
+		font-style: italic;
+		color: #404042;;
+	}
+
+	.lang-tag{
+		color: #A3A3C2;
+	}
+
+	.img-wrap:hover img{
+		opacity: 0.4;
+	    filter: alpha(opacity=100); /* For IE8 and earlier */
+	}
+
+	footer {
+		color:black;
+		clear:both;
+		text-align:left;
+		padding:5px; 
+		margin-top: 10px;
+	}
+
+</style>
