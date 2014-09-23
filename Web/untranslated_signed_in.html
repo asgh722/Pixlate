@@ -18,7 +18,9 @@
 					<div cass="row">
 						<div class="header">
 							<ul class="nav nav-pills pull-right">
-								<button class = "login">Start Here</button>
+								<button class = "login" style="left:25px;width:75px">Alert</button>
+								<button class = "login" style="left:10px;width:75px">Upload</button>
+								<button class = "login" style="width:75px">Logout</button>
 								<div class="input"><input type="searchBar" placeholder="Search"></input></div>
 							</ul>
 							<h3>Pixlate</h3>
@@ -26,8 +28,9 @@
 					</div>
 					<div class="row">
 						<ul class="nav nav-tabs pull-left">
-							<li><a href="demo.html" >Translated</a></li>
-							<li class="active"><a href="untranslated.html" >Untranslated</a></li>
+							<li><a href="demo2.html" >Translated</a></li>
+							<li class="active"><a href="untranslated_singed_in.html" >Untranslated</a></li>
+							<li><a href="profile_page.html" >Profile</a></li>
 						</ul>
 					</div>
 				</nav>
@@ -58,6 +61,8 @@
 								<img ng-src="{{image}}" style="width:900px; height:700px">
 								<br>
 								<div class="caption">
+									<p class="translations" style="font-size: 150%;font-style: italic;color: #404042;">&quot;Translation&quot;</p>
+									<p style="color:#C2C2D6;">#Spanish<p>
 									<p>	
 										<div class="pixlate-tool">
 											</p><a href="#openModal"><button class = "login">Translate!</button></a></td> 
@@ -144,17 +149,21 @@
 		font-family: "baskerville-old-face";
 		font-size: 18px;
 		border-spacing: 0px;
-		position:relative;
-		width:250px;
-
 		-moz-border-radius: 15px;
 		-webkit-border-radius: 15px;
+		position: relative;
 	}
 
 	.login:hover {
 		color: #000;
 		background: #ffff85;
 		opacity: 0.9;
+	}
+
+	ul.login:hover {
+		color: #000;
+		background: #ffff85;
+		opacity: 0.8;
 	}
 
 	input[type="searchBar"] {
@@ -174,6 +183,7 @@
       top: 10px;
       width: 250px;
 	}
+
 
 	body {
 		margin-top: 50px;
