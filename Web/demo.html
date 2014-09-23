@@ -55,10 +55,10 @@
     			<div ng-controller="flickrController">
 			<div class="row">
 				<div class="col-md-3 portfolio-item" ng-repeat="image in images" >
-					<center><div class="img-wrap">
-						<img ng-src="image" class="thumbnail" >
+					<div class="img-wrap">
+					<center><img ng-src="{{image}}" class="thumbnail" ></center>
 						<p class="img-description">&quot;Translation&quot;</p>
-					</div></center>
+					</div>
 					<br>
 				</div>
 			</div> 
@@ -193,13 +193,14 @@
 	font-style: italic;
 	font-size:250%;
 	position: relative;
-	bottom: 80px;
-	left: -40px;
+	bottom: 85px;
+	left: 60px;
 	color: black;
 
 	visibility: hidden;
 	opacity: 0;
- 	}
+ }
+ 
  
     .img-wrap:hover .img-description {
 	visibility: visible;
