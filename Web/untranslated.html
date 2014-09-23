@@ -43,8 +43,8 @@
 					<p>System Translation: Keep Clear, Fire Station</p><br>
 
 					<form name="input" action="demo_form_action.asp" method="get">
-					Translation: <input type="text" name="Translation">
-						<input type="submit" value="Translate">
+					<h4>Translation:</h4> <input type="text" name="Translation" class="translation-box">
+						<input type="submit" value="Translate" class="login" style="position:relative;bottom:230px;left:40px;width:315px">
 					</form>
 
 				</div>
@@ -113,6 +113,12 @@
 		color:#FFFF85;
 		font-family:"olivier";
 		font-size:50px;
+	}
+	
+	h4 {
+		position: relative;
+		left: 370px;
+		bottom: 460px;
 	}
 
 	.login {
@@ -230,4 +236,13 @@
 	.close:hover { 
 		background: #00d9ff; 
 	}
+	
+	.translation-box{
+		width: 320px;
+		height: 400px;
+		position: relative;
+		left: 370px;
+		bottom: 460px;
+	}
+	
 </style>
